@@ -1,24 +1,23 @@
-# README
+# Rock-Paper-Scissors
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirements
+* Rails 7
+* Ruby 3.1.2
 
-Things you may want to cover:
+## Configuration
+  ```sh
+    CURB_API_URL = "url"
+  ```
 
-* Ruby version
+## Initial setup
+- ### Install gems by executing:
 
-* System dependencies
+  ```sh
+    bundle install
+  ```
+- ### Run tests:
 
-* Configuration
+  ```sh
+    rspec
+  ```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
