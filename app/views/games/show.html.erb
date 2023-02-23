@@ -1,0 +1,38 @@
+<% if params[:id] == "bad_throw" %>
+  <div class="card">
+    <h1 class="header1">
+      WRONG THROW
+    </h1>
+    <%= link_to "GO HOME", new_game_path, class: "linkHome" %>
+  </div>
+<% elsif params[:id] == "identical" %>
+  <div class="card">
+    <h1 class="header1">
+      IDENTICAL
+    </h1>
+    <%= image_tag("#{params[:user_throw]}.svg", class: "imageResult") %>
+    <%= link_to "GO HOME", new_game_path, class: "linkHome" %>
+  </div>
+<% elsif params[:id] == "user" %>
+  <div class="card">
+    <h1 class="header1">
+      YOU WIN!
+    </h1>
+    <div class="resultDescription">
+      <%= "Curb with #{params[:curb_throw]} lost" %>
+    </div>
+    <%= image_tag("#{params[:user_throw]}.svg", class: "imageResult") %>
+    <%= link_to "GO HOME", new_game_path, class: "linkHome" %>
+  </div>
+<% else %>
+  <div class="card">
+    <h1 class="header1">
+      YOU LOST!
+    </h1>
+    <div class="resultDescription">
+      <%= "Curb with #{params[:curb_throw]} wins" %>
+    </div>
+    <%= image_tag("#{params[:curb_throw]}.svg", class: "imageResult") %>
+    <%= link_to "GO HOME", new_game_path, class: "linkHome" %>
+  </div>
+<% end %>
